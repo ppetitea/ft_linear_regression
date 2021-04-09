@@ -4,9 +4,15 @@ The aim of this project is to introduce you to the basic concept behind machine 
 
 ### usage
 
-> py generate.py
-> py train.py
-> py estimate.py
+```python
+> py generate.py -h
+```
+```python
+> py train.py -h
+```
+```python
+> py estimate.py -h
+```
 
 ### requirement
 
