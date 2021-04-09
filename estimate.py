@@ -10,16 +10,17 @@ def parseArgs():
         args.append(sys.argv[i])
         i = i + 1
     parser = argparse.ArgumentParser(
-        description='Train algorithm to estimate car price from its kilometer')
+        description='Estimate y value from x after train algorithm with dataset')
+    parser.add_argument('-km', metavar='number', type=float,
+                        default=-1, required=True)
     parser.add_argument('-file', metavar='filename', default='thetas.csv')
-    parser.add_argument('-x', metavar='number', type=float, default=0)
     return parser.parse_args(args)
 
 
 def estimate():
     args = parseArgs()
     t0, t1 = getThetas(args.file)
-    x = float(args.x)
+    x = float(args.km)
     a = float(t1)
     b = float(t0)
     res = a * x + b

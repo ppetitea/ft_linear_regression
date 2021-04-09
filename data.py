@@ -2,10 +2,13 @@ import csv
 
 
 def writeData(filename, rows):
-    with open(filename, 'w', newline='') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='\n')
-        for row in rows:
-            spamwriter.writerow(row)
+    try:
+        with open(filename, 'w', newline='') as csvfile:
+            spamwriter = csv.writer(csvfile, delimiter=',', quotechar='\n')
+            for row in rows:
+                spamwriter.writerow(row)
+    except IOError:
+        print("Fail to write in file " + filename)
 
 
 def importData(filename):

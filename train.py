@@ -57,7 +57,7 @@ def parseArgs():
         args.append(sys.argv[i])
         i = i + 1
     parser = argparse.ArgumentParser(
-        description='Train algorithm to estimate car price from its kilometer')
+        description='Train algorithm to estimate y value from x with dataset')
     parser.add_argument('-file', metavar='filename', default='data.csv')
     parser.add_argument('-i', metavar='iterations', type=int, default=500)
     parser.add_argument('-a', metavar='alpha', type=float,
