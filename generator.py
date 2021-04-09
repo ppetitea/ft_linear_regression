@@ -2,13 +2,7 @@ import random
 import csv
 import sys
 import argparse
-
-
-def writeData(filename, rows):
-    with open(filename, 'w', newline='') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='\n')
-        for row in rows:
-            spamwriter.writerow(row)
+from data import writeData
 
 
 def rand(n):
